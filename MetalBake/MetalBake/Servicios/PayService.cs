@@ -12,18 +12,14 @@ namespace MetalBake.Servicios {
             metalBakeAccount.Collect(cost);
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-
-            StreamWriter file = new StreamWriter(@"C:\order.json");
-            file.WriteLine(ToJson);
+            File.WriteAllText(@"C:\order.json", ToJson);
         }
         public void MetalBakeRefundToClient(double cost, MetalBakeAccount metalBakeAccount, Client client, Order order) {
             client.Collect(cost);
             metalBakeAccount.Refund(cost);
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-            StreamWriter file = new StreamWriter(@"C:\order.json");
-            file.WriteLine(ToJson);
-
+            File.WriteAllText(@"C:\order.json", ToJson);
         }
     }
 }
