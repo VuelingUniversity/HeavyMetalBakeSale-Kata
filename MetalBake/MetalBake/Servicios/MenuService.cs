@@ -54,7 +54,7 @@ namespace MetalBake.Servicios {
                         }
                     }
                 } else if (input == "3") {
-
+                    _readerService.DisplayProducts();
                 } else if (input == "4") {
                     Console.WriteLine("Quitting");
                     break;
@@ -64,7 +64,7 @@ namespace MetalBake.Servicios {
             }
         }
 
-        private List<Item> FillItemsList() {
+        public List<Item> FillItemsList() {
             List<Item> ret = new List<Item>();
             Item Brownie = new Item("B", "Brownie ", 0.65, 40);
             Item Muffin = new Item("M", "Muffin  ", 1.00, 36);

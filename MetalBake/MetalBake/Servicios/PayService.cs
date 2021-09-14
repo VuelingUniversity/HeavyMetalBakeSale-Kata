@@ -19,7 +19,7 @@ namespace MetalBake.Servicios {
             metalBakeAccount.Refund(cost);
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-            File.WriteAllText(@"C:\order.json", ToJson);
+            File.WriteAllText(@$"C:\order{DateTime.Now}.json", ToJson);
         }
     }
 }
