@@ -1,12 +1,9 @@
 ﻿using System;
 
-namespace MetalBake
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+namespace MetalBake {
+    class Program {
+        static void Main(string[] args) {
+
         }
     }
 }
