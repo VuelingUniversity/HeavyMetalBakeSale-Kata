@@ -1,5 +1,6 @@
 ﻿using MetalBake.Interfaces;
 using MetalBake.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -42,17 +43,16 @@ namespace MetalBake.Servicios {
                         Y for yes, !Y to end");
                         string Continue = Console.ReadLine();
                         if (Continue != "Y") {
-                            Order order = new Order(OrderId, ToBuyItems);
+                            Order Order = new Order(OrderId, ToBuyItems);
                             OrderId++;
                             double total = 0;
                             foreach (var v in ToBuyItems) {
                                 total += v.Price;
                             }
-                            _payService.ClientPayToMetalBake(total, MetalBakeAccount, Client);
+                            _payService.ClientPayToMetalBake(total, MetalBakeAccount, Client, Order);
                             break;
                         }
                     }
-
                 } else if (input == "3") {
 
                 } else if (input == "4") {

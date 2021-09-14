@@ -1,18 +1,29 @@
-﻿using MetalBake.Interfaces;
+﻿using MetalBake.DataControl;
+using MetalBake.Interfaces;
 using MetalBake.Models;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace MetalBake.Servicios {
-    class PayService : IPay{
-        public void ClientPayToMetalBake(double cost, MetalBakeAccount metalBakeAccount, Client client) {
+    class PayService : IPay {
+        public void ClientPayToMetalBake(double cost, MetalBakeAccount metalBakeAccount, Client client, Order order) {
             client.Pay(cost);
             metalBakeAccount.Collect(cost);
+            OrderData orderData = new OrderData(DateTime.Now, client, order);
+            string ToJson = JsonConvert.SerializeObject(orderData);
+
+            StreamWriter file = new StreamWriter(@"C:\order.json");
+            file.WriteLine(ToJson);
         }
-        public void MetalBakeRefundToClient(double cost, MetalBakeAccount metalBakeAccount, Client client) {
+        public void MetalBakeRefundToClient(double cost, MetalBakeAccount metalBakeAccount, Client client, Order order) {
             client.Collect(cost);
             metalBakeAccount.Refund(cost);
+            OrderData orderData = new OrderData(DateTime.Now, client, order);
+            string ToJson = JsonConvert.SerializeObject(orderData);
+            StreamWriter file = new StreamWriter(@"C:\order.json");
+            file.WriteLine(ToJson);
+
         }
     }
 }
