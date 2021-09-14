@@ -16,5 +16,15 @@ namespace MetalBake.Models {
             _clientBalance = clientBalance;
         }
         #endregion
+        #region Metodos
+        public void Pay(double cost) {
+            Console.WriteLine($"The client payed {cost} euros");
+            this.ClientBalance -= cost;
+        }
+        public void Collect(double cost) {
+            Console.WriteLine($"The client collected {cost} euros");
+            this.ClientBalance += cost;
+        }
+        #endregion
     }
 }

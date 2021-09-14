@@ -14,5 +14,15 @@ namespace MetalBake.Models {
         #endregion
         #region Constructor
         #endregion
+        #region Metodos
+        public void Collect(double cost) {
+            Console.WriteLine($"The Bank collected {cost} euros");
+            this._metalBakeBalance += cost;
+        }
+        public void Refund(double cost) {
+            Console.WriteLine($"The client refunded {cost} euros");
+            this.MetalBakeBalance -= cost;
+        }
+        #endregion
     }
 }
