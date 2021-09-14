@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MetalBake.Interfaces {
-    class IMenu {
+﻿namespace MetalBake.Interfaces {
+    interface IMenu {
+        void Display();
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MetalBake.Interfaces {
-    class IReader {
+﻿namespace MetalBake.Interfaces {
+    interface IReader {
     }
 }

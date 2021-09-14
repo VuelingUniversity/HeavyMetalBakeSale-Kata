@@ -10,7 +10,7 @@ namespace MetalBake.Servicios {
             var Container = new ServiceCollection()
           .AddSingleton<IMenu, MenuService>()
           .AddSingleton<IPay, PayService>()
-          .AddSingleton<IReader, ReaderService>();
+          .AddTransient<IReader, ReaderService>();
             return Container.BuildServiceProvider();
         }
     }

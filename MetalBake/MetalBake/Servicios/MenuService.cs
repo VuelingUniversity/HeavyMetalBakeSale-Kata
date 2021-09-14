@@ -6,6 +6,7 @@ using System.Text;
 namespace MetalBake.Servicios {
     class MenuService : IMenu {
         public void Display() {
+
         }
     }
 }
