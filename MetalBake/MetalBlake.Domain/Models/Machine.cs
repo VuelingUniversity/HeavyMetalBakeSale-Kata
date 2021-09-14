@@ -20,6 +20,7 @@ namespace MetalBlake.Domain.Models
         public double BuyProduct(char[] list, double amountPaid)
         {
             throw new NotImplementedException();
+
         }
     }
 }
