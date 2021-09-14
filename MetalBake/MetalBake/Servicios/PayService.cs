@@ -10,7 +10,7 @@ namespace MetalBake.Servicios {
             client.Pay(cost);
             metalBakeAccount.Collect(cost);
         }
-        public void MetalBake(double cost, MetalBakeAccount metalBakeAccount, Client client) {
+        public void MetalBakeRefundToClient(double cost, MetalBakeAccount metalBakeAccount, Client client) {
             client.Collect(cost);
             metalBakeAccount.Refund(cost);
         }

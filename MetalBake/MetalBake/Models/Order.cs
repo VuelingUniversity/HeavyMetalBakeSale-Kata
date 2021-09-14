@@ -6,16 +6,15 @@ namespace MetalBake.Models {
     class Order {
         #region Variables
         private int _orderId;
-        private string[] _itemList;
+        private List<Item> _itemList;
         #endregion
         #region Getters y Setters
-        public int OrderId { get => _orderId; set => _orderId = value; }
-        public string[] ItemList { get => _itemList; set => _itemList = value; }
+        public int OrderId { get => _orderId; set => _orderId = value; }       
         #endregion
         #region Constructor
-        public Order(int orderId, string[] stringArray) {
+        public Order(int orderId, List<Item>itemList) {
             _orderId = orderId;
-            _itemList = stringArray;
+            _itemList = itemList;
         }
         #endregion
     }

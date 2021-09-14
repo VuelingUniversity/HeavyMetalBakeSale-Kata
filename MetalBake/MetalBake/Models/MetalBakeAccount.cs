@@ -13,6 +13,10 @@ namespace MetalBake.Models {
         public string Iban { get => _iban; set => _iban = value; }
         #endregion
         #region Constructor
+        public MetalBakeAccount(double metalBakeBalance, string iban) {
+            _metalBakeBalance = metalBakeBalance;
+            _iban = iban;
+        }
         #endregion
         #region Metodos
         public void Collect(double cost) {
