@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace MetalBake.Servicios {
     public class WriterReaderService : IReader{
@@ -33,10 +32,10 @@ namespace MetalBake.Servicios {
             ret.Add(Water);
             return ret;
         }
-        public static void WriteOrder(double cost, MetalBakeAccount metalBakeAccount, Client client, Order order) {
+        public static void WriteOrder(Client client, Order order) {
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-            File.WriteAllText($"C:\\order{DateTime.Now.Day}/{DateTime.Now.Hour}:{DateTime.Now.Second}.json", ToJson);
+            File.WriteAllText($"C:\\order{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}.json", ToJson);
         }
     }
 }
