@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MetalBake.Servicios {
-    class MenuWithInterface : IMenu {
+    class MenuWithInterface {
         public void Display() {
-            ReaderService _readerService = new ReaderService();
+            WriterReaderService _readerService = new WriterReaderService();
             PayService _payService = new PayService();
-            List<Item> VendingItems = FillItemsList();
+            List<Item> VendingItems = WriterReaderService.FillItemsList();
             List<Item> ToBuyItems = new List<Item>();
             Client Client = new Client("IdUsuario", 100.00);
             MetalBakeAccount MetalBakeAccount = new MetalBakeAccount(0, "AL47 2121 1009 0000 0002 3569 8741");
@@ -50,7 +50,7 @@ namespace MetalBake.Servicios {
                         }
                     }
                 } else if (input == "3") {
-                    _readerService.DisplayProducts();
+                    _readerService.DisplayJsonProducts();
                 } else if (input == "4") {
                     Console.WriteLine("Quitting");
                     break;
@@ -60,17 +60,6 @@ namespace MetalBake.Servicios {
             }
         }
 
-        public List<Item> FillItemsList() {
-            List<Item> ret = new List<Item>();
-            Item Brownie = new Item("B", "Brownie ", 0.65, 40);
-            Item Muffin = new Item("M", "Muffin  ", 1.00, 36);
-            Item CakePop = new Item("C", "Cake Pop", 1.35, 24);
-            Item Water = new Item("W", "Water   ", 1.50, 30);
-            ret.Add(Brownie);
-            ret.Add(Muffin);
-            ret.Add(CakePop);
-            ret.Add(Water);
-            return ret;
-        }
+        
     }
 }

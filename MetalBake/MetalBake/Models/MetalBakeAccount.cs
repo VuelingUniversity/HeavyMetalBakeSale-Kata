@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MetalBake.Models {
-    class MetalBakeAccount {
+    public class MetalBakeAccount {
         #region Variables
         private double _metalBakeBalance;
         private string _iban;

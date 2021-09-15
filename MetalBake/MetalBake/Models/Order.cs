@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MetalBake.Models {
-    class Order {
+    public class Order {
         #region Variables
         private int _orderId;
         private List<Item> _itemList;

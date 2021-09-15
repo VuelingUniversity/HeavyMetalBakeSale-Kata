@@ -1,5 +1,7 @@
-﻿namespace MetalBake.Models {
-    class Item {
+﻿using System.Collections.Generic;
+
+namespace MetalBake.Models {
+    public class Item {
         #region Variables
         private string _itemId;
         private string _name;

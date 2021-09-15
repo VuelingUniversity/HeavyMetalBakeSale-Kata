@@ -1,10 +1,10 @@
 ﻿using System;
 
 namespace MetalBake.Models {
-    class Client {
+    public class Client {
         #region Variables
         private string _clientId;
-        private Double _clientBalance;
+        private double _clientBalance;
         #endregion
         #region Getters y Setters
         public string ClientId { get => _clientId; set => _clientId = value; }
