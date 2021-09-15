@@ -12,14 +12,14 @@ namespace MetalBake.Servicios {
             metalBakeAccount.Collect(cost);
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-            File.WriteAllText(@"C:\order.json", ToJson);
+            File.WriteAllText($"C:\\order{DateTime.Now.Day}/{DateTime.Now.Hour}:{DateTime.Now.Second}.json", ToJson);
         }
         public void MetalBakeRefundToClient(double cost, MetalBakeAccount metalBakeAccount, Client client, Order order) {
             client.Collect(cost);
             metalBakeAccount.Refund(cost);
             OrderData orderData = new OrderData(DateTime.Now, client, order);
             string ToJson = JsonConvert.SerializeObject(orderData);
-            File.WriteAllText(@$"C:\order{DateTime.Now}.json", ToJson);
+            File.WriteAllText($"C:\\order{DateTime.Now.Day}/{DateTime.Now.Hour}:{DateTime.Now.Second}.json", ToJson);
         }
     }
 }

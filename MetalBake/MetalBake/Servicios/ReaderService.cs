@@ -14,8 +14,10 @@ namespace MetalBake.Servicios {
             }
         }
         public void DisplayProducts() {
-            string JsonTxt = File.ReadAllText(@"C:\order.json");
-            Console.WriteLine(JsonTxt);
+            var directory = Directory.GetFiles(@"C:");
+            foreach(var jsonTxt in directory) {
+                Console.WriteLine(jsonTxt);
+            }
         } 
     }
 }

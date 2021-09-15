@@ -6,15 +6,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MetalBake.Servicios {
-    class MenuService : IMenu {
-        private IPay _payService;
-        private IReader _readerService;
-
-        public MenuService(IPay payService, IReader readerService) {
-            _payService = payService;
-            _readerService = readerService;
-        }
+    class MenuWithInterface : IMenu {
         public void Display() {
+            ReaderService _readerService = new ReaderService();
+            PayService _payService = new PayService();
             List<Item> VendingItems = FillItemsList();
             List<Item> ToBuyItems = new List<Item>();
             Client Client = new Client("IdUsuario", 100.00);
@@ -48,6 +43,7 @@ namespace MetalBake.Servicios {
                             double total = 0;
                             foreach (var v in ToBuyItems) {
                                 total += v.Price;
+                                v.Quantity--;
                             }
                             _payService.ClientPayToMetalBake(total, MetalBakeAccount, Client, Order);
                             break;
@@ -59,7 +55,7 @@ namespace MetalBake.Servicios {
                     Console.WriteLine("Quitting");
                     break;
                 } else {
-                    Console.WriteLine("");
+                    Console.WriteLine("oops");
                 }
             }
         }

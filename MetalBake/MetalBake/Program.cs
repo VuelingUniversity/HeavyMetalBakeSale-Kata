@@ -6,8 +6,7 @@ using MetalBake.Servicios;
 namespace MetalBake {
     class Program {
         static void Main(string[] args) {
-            var ContainerProvider = Container.Build();
-            var MenuManager = ContainerProvider.GetService<IMenu>();
+            var MenuManager = new MenuWithInterface();
             MenuManager.Display();
         }
     }
