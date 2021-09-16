@@ -11,8 +11,9 @@ namespace MetalBake.Models
             Id = id;
             Name = name;
         }
-
+        #region Propierties
         public int Id { get; set; }
         public string Name { get; set; }
+        #endregion
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetalBake.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,15 +7,27 @@ namespace MetalBake.Models
 {
    public class Changes
     {
-        public Changes(int id, Sales sales, decimal returnMoney)
+        public Changes(int id, decimal returnMoney)
         {
             Id = id;
-            Sales = sales;
+            
             ReturnMoney = returnMoney;
         }
-
+        #region Propieties
         public int Id { get; set; }
-        public Sales Sales { get; set; }
+        
         public decimal ReturnMoney { get; set; }
+        #endregion
+        #region Methods
+        public bool CheckChange()
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal ReturnChange()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }
