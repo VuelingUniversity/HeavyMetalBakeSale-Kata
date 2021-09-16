@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetalBlake.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace MetalBlake.Domain.Interfaces
 {
     public interface IMachine
     {
-        public double BuyProduct(char[] list, double amountPaid);
+        public void BuyProduct(Order order,Machine machine, double amountPaid);
+        
 
         
     }

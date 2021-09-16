@@ -34,5 +34,19 @@ namespace MetalBlake.Domain.Models
             CakePop p = (CakePop)product;
             p.Amount -= 1;
         }
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public double GetPrice()
+        {
+            return Price;
+        }
+
+        public void ShowProduct()
+        {
+            Console.WriteLine($"Name: {Name} Amount: {Amount}");
+        }
     }
 }

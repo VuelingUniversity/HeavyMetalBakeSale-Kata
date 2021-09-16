@@ -11,6 +11,9 @@ namespace MetalBlake.Domain.Interfaces
     {
         public void RemoveStock(IProduct product);
         public void AddStock(IProduct product);
+        public void ShowProduct();
+        public string GetName();
+        public double GetPrice();
         
 
     }

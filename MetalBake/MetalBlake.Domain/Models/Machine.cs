@@ -8,19 +8,22 @@ using System.Threading.Tasks;
 namespace MetalBlake.Domain.Models
 
 {
-    public class Machine : IMachine
+    public class Machine 
     {
         public List<IProduct> ProductList { get; set; }
 
         public Machine()
         {
-           
+            ProductList = new List<IProduct>();
         }
 
-        public double BuyProduct(char[] list, double amountPaid)
+        public void ShowProducts()
         {
-            throw new NotImplementedException();
-
+            ProductList.ForEach(product =>
+            {
+                product.ShowProduct();
+            });
         }
+        
     }
 }
