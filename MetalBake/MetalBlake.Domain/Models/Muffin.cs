@@ -24,8 +24,8 @@ namespace MetalBlake.Domain.Models
         }
         public void RemoveStock(IProduct product)
         {
-            Muffin p = (Muffin)product;
-            p.Amount -= 1;
+            
+            Amount -= 1;
 
         }
 

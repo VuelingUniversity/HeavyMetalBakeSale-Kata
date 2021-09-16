@@ -22,8 +22,7 @@ namespace MetalBlake.Domain.Models
 
         public void RemoveStock(IProduct product)
         {
-                Brownie p = (Brownie) product;
-                p.Amount -= 1;
+                Amount -= 1;
             
         }
 

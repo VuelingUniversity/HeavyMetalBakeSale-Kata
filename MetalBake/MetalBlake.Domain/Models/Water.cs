@@ -31,8 +31,8 @@ namespace MetalBlake.Domain.Models
 
         public void AddStock(IProduct product)
         {
-            Water p = (Water)product;
-            p.Amount -= 1;
+            
+            Amount -= 1;
         }
         public string GetName()
         {
