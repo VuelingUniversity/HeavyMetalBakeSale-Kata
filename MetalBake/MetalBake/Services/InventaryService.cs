@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MetalBake.Services
 {
-    class InventaryService
+    public class InventaryService
     {
     }
 }

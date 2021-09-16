@@ -6,5 +6,8 @@ namespace MetalBake.Interfaces
 {
     public interface IPayable
     {
+        public bool CheckPaid();
+        public decimal CalculateBill();
+        
     }
 }

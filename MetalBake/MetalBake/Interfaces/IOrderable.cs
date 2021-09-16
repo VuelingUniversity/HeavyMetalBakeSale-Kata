@@ -4,7 +4,10 @@ using System.Text;
 
 namespace MetalBake.Interfaces
 {
-    interface IOrderable
+    public interface IOrderable
     {
+        public bool CheckOrder();
+        public int OrderItems();
+
     }
 }
