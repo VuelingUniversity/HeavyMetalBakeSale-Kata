@@ -1,4 +1,4 @@
-﻿using MetalBake.Interfaces;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +16,7 @@ namespace MetalBake.Models
         #region Propieties
         public int Id { get; set; }
         public string Iban { get; set; }
-        public int idSales { get; set; }     
+        //public int idSales { get; set; }     
         public int AmmountAccount { get; set; }
         #endregion
         #region Methods
