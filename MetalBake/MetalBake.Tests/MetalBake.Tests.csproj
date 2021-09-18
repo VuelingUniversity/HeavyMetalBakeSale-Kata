@@ -19,8 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MetalBake\MetalBake.csproj" />
-  </ItemGroup>
-
 </Project>
