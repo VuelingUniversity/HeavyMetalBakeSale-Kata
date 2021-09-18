@@ -8,6 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockService", "StockService\", "{6F89DD99-1398-4234-93FD-58B994D185EF}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{565336ea-3fe3-4f72-ae3f-2d00ce6d9dfc}|BakeryStockLibrary.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62045"
 		Debug.AspNetCompiler.PhysicalPath = "StockService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62045\"
@@ -30,6 +31,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryStockLibrary", "BakeryStockLibrary\BakeryStockLibrary.csproj", "{565336EA-3FE3-4F72-AE3F-2D00CE6D9DFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBakeConsumer", "MetalBakeClient\MetalBakeConsumer.csproj", "{05B5736A-E9AE-4FBF-938E-B173DAD233A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6F89DD99-1398-4234-93FD-58B994D185EF} = {6F89DD99-1398-4234-93FD-58B994D185EF}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
