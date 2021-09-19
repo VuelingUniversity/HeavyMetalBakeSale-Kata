@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BakeryStockLibrary {
+    [DataContract]
     public class Item {
         #region Variables
         private string _itemId;

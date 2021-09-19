@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -45,16 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServerReferce\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="DataControl\OrderData.cs" />
     <Compile Include="Front\MenuWithInterface.cs" />
     <Compile Include="Interfaces\IPay.cs" />
     <Compile Include="Interfaces\IReader.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\MetalBakeAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,19 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ServerReferce\MetalBakeClient.ServerReferce.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServerReferce\Service.wsdl" />
-    <None Include="Connected Services\ServerReferce\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServerReferce\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServerReferce\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BakeryStockLibrary.Item.datasource" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BakeryStockLibrary\BakeryStockLibrary.csproj">
@@ -85,24 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServerReferce\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServerReferce\Service.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServerReferce\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServerReferce\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ServerReferce\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

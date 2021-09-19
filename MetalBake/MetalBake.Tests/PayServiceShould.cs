@@ -4,6 +4,7 @@ using Xunit;
 using MetalBake.Interfaces;
 using MetalBake.Models;
 using MetalBake.Servicios;
+using BakeryStockLibrary;
 
 namespace MetalBake.Tests {
     public class PayServiceShould {

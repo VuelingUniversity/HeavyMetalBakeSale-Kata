@@ -1,11 +1,14 @@
 ﻿using MetalBake.Models;
 using System;
 using System.Collections.Generic;
+using BakeryStockLibrary;
+using MetalBakeClient.ServiceReference;
 
 namespace MetalBake.Servicios {
     class MenuWithInterface {
         public void Display() {
             WriterReaderService _readerService = new WriterReaderService();
+            ServiceClient ServerReferce = new ServiceClient();
             PayService _payService = new PayService();
             List<Item> VendingItems = WriterReaderService.FillItemsList();
             List<Item> ToBuyItems = new List<Item>();
@@ -38,9 +41,9 @@ namespace MetalBake.Servicios {
                             Order Order = new Order(OrderId, ToBuyItems);
                             OrderId++;
                             double total = 0;
-                            foreach (var v in ToBuyItems) {
-                                total += v.Price;
-                                v.Quantity--;
+                            for (int i = 0; i < ToBuyItems.Count; i++) {
+                                total += ToBuyItems[i].Price;
+                                ToBuyItems[i] = ServerReferce.ReduceStock(ToBuyItems[i]);
                             }
                             _payService.ClientPayToMetalBake(total, MetalBakeAccount, Client, Order);
                             break;

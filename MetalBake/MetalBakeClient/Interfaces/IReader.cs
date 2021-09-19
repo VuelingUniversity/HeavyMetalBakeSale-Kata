@@ -1,4 +1,4 @@
-﻿using MetalBake.Models;
+﻿using BakeryStockLibrary;
 using System.Collections.Generic;
 
 namespace MetalBake.Interfaces {
