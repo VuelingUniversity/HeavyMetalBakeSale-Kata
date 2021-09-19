@@ -5,20 +5,15 @@ using System.Text;
 
 namespace MetalBake.Models
 {
-    class Muffin :IStockable
+    internal class Muffin : IProductable
     {
-        public string GetName()
-        {
-            return "Brownie";
-        }
+        public char ShortName { get; set; }
+        public string Name { get; set; }
 
-        public decimal GetPrice()
+        public Muffin()
         {
-            return 0.65M;
-        }
-        public int GetAmount()
-        {
-            return 40;
+            ShortName = 'M';
+            Name = "Muffin";
         }
     }
 }

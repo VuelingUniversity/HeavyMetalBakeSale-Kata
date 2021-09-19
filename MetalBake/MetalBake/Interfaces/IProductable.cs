@@ -4,8 +4,9 @@ using System.Text;
 
 namespace MetalBake.Interfaces
 {
-    interface IStockable
+    internal interface IProductable
     {
-
+        char ShortName { get; set; }
+        string Name { get; set; }
     }
 }

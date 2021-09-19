@@ -5,20 +5,15 @@ using System.Text;
 
 namespace MetalBake.Models
 {
-    public class Cake_Pop : IStockable
+    public class Cake_Pop : IProductable
     {
-        public string GetName()
-        {
-            return "Cake_Pop";
-        }
+        public char ShortName { get; set; }
+        public string Name { get; set; }
 
-        public decimal GetPrice()
+        public Cake_Pop()
         {
-            return 1.35M;
-        }
-        public int GetAmount()
-        {
-            return 24;
+            ShortName = 'C';
+            Name = "Cake_Pop";
         }
     }
 }
