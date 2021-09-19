@@ -18,7 +18,6 @@ public class CompositeType {
         get { return boolValue; }
         set { boolValue = value; }
     }
-
     [DataMember]
     public string StringValue {
         get { return stringValue; }
