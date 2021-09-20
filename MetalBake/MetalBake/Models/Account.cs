@@ -17,18 +17,18 @@ namespace MetalBake.Models
         public int Id { get; set; }
         public string Iban { get; set; }
         //public int idSales { get; set; }     
-        public int AmmountAccount { get; set; }
+        public double AmmountAccount { get; set; }
         #endregion
         #region Methods
-        public decimal decreaseAmountAccount()
+        public double decreaseAmountAccount()
         {
             throw new NotImplementedException();
         }
-        public decimal IncreaseAccount()
+        public double IncreaseAccount()
         {
             throw new NotImplementedException();
         }
-        public decimal TotalAmountAccount()
+        public double TotalAmountAccount()
         {
             throw new NotImplementedException();
         }

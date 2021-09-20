@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MetalBake.Services
 {
-    public class AccountService 
+    public class RegisterService 
     {
        
     }
