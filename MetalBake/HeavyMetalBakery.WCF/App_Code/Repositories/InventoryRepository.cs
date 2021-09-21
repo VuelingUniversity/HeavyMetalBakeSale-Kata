@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 /// <summary>
 /// Descripción breve de ItemRepository
 /// </summary>
-public class ItemRepository : IInventoryRepository
+public class InventoryRepository : IItemRepository
 {
     private static Dictionary<string, int> _stock;
-    public ItemRepository()
+
+    public InventoryRepository()
     {
         _stock = new Dictionary<string, int>() { { "B", 30 }, { "M", 36 }, { "C", 24 }, { "W", 1 } };
     }
@@ -32,6 +30,7 @@ public class ItemRepository : IInventoryRepository
         _stock[item.ItemId] = item.Quantity;
         return true;
     }
+
     public bool Exists(string itemId)
     {
         return _stock.ContainsKey(itemId);

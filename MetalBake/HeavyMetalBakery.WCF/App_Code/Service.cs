@@ -1,26 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-
-// NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
-public class Service : IService
+﻿public class Service : IService
 {
+    private IItemRepository _svc;
+
+    public Service()
+    {
+        _svc = new InventoryRepository();
+    }
+
     public void AddStock(string itemId, int amount)
     {
-        throw new NotImplementedException();
+        var item = _svc.GetItem(itemId);
+        if (item.Quantity > 0)
+        {
+            item.Quantity++;
+            _svc.Save(item);
+        }
     }
 
     public int CheckStock(string itemId)
     {
-        throw new NotImplementedException();
+        var item = _svc.GetItem(itemId);
+        if (item == null)
+            return 0;
+        return item.Quantity;
     }
 
     public void ReduceStock(string itemId)
     {
-        throw new NotImplementedException();
+        var item = _svc.GetItem(itemId);
+        if (item.Quantity > 0)
+        {
+            item.Quantity--;
+            _svc.Save(item);
+        }
     }
 }
