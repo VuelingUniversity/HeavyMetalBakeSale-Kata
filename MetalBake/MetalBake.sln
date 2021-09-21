@@ -26,14 +26,14 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockService", "StockServic
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryStockLibrary", "BakeryStockLibrary\BakeryStockLibrary.csproj", "{565336EA-3FE3-4F72-AE3F-2D00CE6D9DFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.Library", "BakeryStockLibrary\MetalBake.Library.csproj", "{565336EA-3FE3-4F72-AE3F-2D00CE6D9DFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBakeConsumer", "MetalBakeClient\MetalBakeConsumer.csproj", "{05B5736A-E9AE-4FBF-938E-B173DAD233A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.Console", "MetalBakeClient\MetalBake.Console.csproj", "{05B5736A-E9AE-4FBF-938E-B173DAD233A9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6F89DD99-1398-4234-93FD-58B994D185EF} = {6F89DD99-1398-4234-93FD-58B994D185EF}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5C397E66-B864-4574-9CEC-2FF20A799343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetalBake.WebApi", "WebApi\MetalBake.WebApi.csproj", "{5C397E66-B864-4574-9CEC-2FF20A799343}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.Test", "MetalBake.Test\MetalBake.Test.csproj", "{167F5B0C-84FD-494F-909D-F7B1AD4B0586}"
 EndProject

@@ -80,9 +80,9 @@
     <None Include="Properties\DataSources\BakeryStockLibrary.Item.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BakeryStockLibrary\BakeryStockLibrary.csproj">
+    <ProjectReference Include="..\BakeryStockLibrary\MetalBake.Library.csproj">
       <Project>{565336ea-3fe3-4f72-ae3f-2d00ce6d9dfc}</Project>
-      <Name>BakeryStockLibrary</Name>
+      <Name>MetalBake.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
