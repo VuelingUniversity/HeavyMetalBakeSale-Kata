@@ -1,6 +1,6 @@
 ﻿namespace HeavyMetalBakery.Services
 {
-    internal interface IStockService
+    public interface IStockService
     {
         bool CheckStock(string itemId);
 
