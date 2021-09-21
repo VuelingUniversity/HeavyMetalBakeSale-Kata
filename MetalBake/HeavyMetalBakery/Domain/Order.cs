@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace HeavyMetalBakery.Domain
 {
-    class Order
+    internal class Order
     {
         private List<OrderItem> _listOfItems;
 
@@ -13,19 +13,20 @@ namespace HeavyMetalBakery.Domain
         }
 
         public decimal AmountToPay { get { return _listOfItems.Sum(i => i.TotalPrice); } }
-        public IEnumerable<OrderItem> OrderItems { get{ return _listOfItems; } }
+        public IEnumerable<OrderItem> OrderItems { get { return _listOfItems; } }
+
         public void AddItems(string[] itemIds)
         {
-            foreach(var itemId in itemIds)
+            foreach (var itemId in itemIds)
             {
                 var item = _listOfItems.FirstOrDefault(i => i.ItemId == itemId);
                 if (item == null)
                     _listOfItems.Add(item);
                 else
                     item.IncreaseAmount();
-
             }
         }
+
         public bool CanBePurchased()
         {
             return _listOfItems.Count > 0;

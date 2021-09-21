@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MetalBake",
+    "\\MetalBake\\HeavyMetalBakery",
+    "\\MetalBake\\HeavyMetalBakery\\Domain"
+  ],
+  "SelectedNode": "\\MetalBake\\HeavyMetalBakery\\Domain\\Order.cs",
+  "PreviewInSolutionExplorer": false
+}
