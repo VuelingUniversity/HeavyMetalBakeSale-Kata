@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using BakeryStockLibrary;
-using MetalBakeClient.ServiceReference;
+using MetalBakeClient.StockServiceClient;
 
 namespace MetalBake.Servicios {
     class MenuWithInterface {
         public void Display() {
             WriterReaderService _readerService = new WriterReaderService();
-            ServiceClient ServerReferce = new ServiceClient();
+            StockServiceClient ServerReferce = new StockServiceClient();
             PayService _payService = new PayService();
             List<Item> VendingItems = WriterReaderService.FillItemsList();
             List<Item> ToBuyItems = new List<Item>();
