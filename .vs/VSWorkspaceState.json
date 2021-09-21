@@ -3,8 +3,9 @@
     "",
     "\\MetalBake",
     "\\MetalBake\\HeavyMetalBakery",
-    "\\MetalBake\\HeavyMetalBakery\\Domain"
+    "\\MetalBake\\HeavyMetalBakery\\Domain",
+    "\\MetalBake\\HeavyMetalBakery\\Services"
   ],
-  "SelectedNode": "\\MetalBake\\HeavyMetalBakery\\Domain\\Order.cs",
+  "SelectedNode": "\\MetalBake\\HeavyMetalBakery\\Services\\IStockService.cs",
   "PreviewInSolutionExplorer": false
 }

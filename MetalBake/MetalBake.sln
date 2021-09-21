@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.Infraestru
 		{FAD1F0E4-0D5B-4EDC-947F-0AE47948479D} = {FAD1F0E4-0D5B-4EDC-947F-0AE47948479D}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.Console", "HeavyMetalBakery.Console\HeavyMetalBakery.Console.csproj", "{2244EEB0-0E24-4E60-BE2B-682B570C56E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{09AE676B-56EB-4B10-B3C9-923EE3FBAB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09AE676B-56EB-4B10-B3C9-923EE3FBAB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09AE676B-56EB-4B10-B3C9-923EE3FBAB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2244EEB0-0E24-4E60-BE2B-682B570C56E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2244EEB0-0E24-4E60-BE2B-682B570C56E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2244EEB0-0E24-4E60-BE2B-682B570C56E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2244EEB0-0E24-4E60-BE2B-682B570C56E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

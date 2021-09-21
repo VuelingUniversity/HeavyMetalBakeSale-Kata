@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace HeavyMetalBakery.Domain
 {
-    internal class Order
+    public class Order
     {
         private List<OrderItem> _listOfItems;
 
@@ -19,11 +19,11 @@ namespace HeavyMetalBakery.Domain
         {
             foreach (var itemId in itemIds)
             {
-                var item = _listOfItems.FirstOrDefault(i => i.ItemId == itemId);
-                if (item == null)
-                    _listOfItems.Add(item);
+                var ol = _listOfItems.FirstOrDefault(l => l.ItemId == itemId);
+                if (ol == null)
+                    _listOfItems.Add(new OrderItem(itemId));
                 else
-                    item.IncreaseAmount();
+                    ol.IncreaseAmount();
             }
         }
 

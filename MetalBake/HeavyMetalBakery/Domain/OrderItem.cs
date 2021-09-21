@@ -1,7 +1,12 @@
 ﻿namespace HeavyMetalBakery.Domain
 {
-    internal class OrderItem
+    public class OrderItem
     {
+        public OrderItem(string itemId)
+        {
+            ItemId = itemId;
+            Amount = 1;
+        }
         public int Amount { get; private set; }
         public decimal BasePrice { get; set; }
         public string ItemId { get; }
