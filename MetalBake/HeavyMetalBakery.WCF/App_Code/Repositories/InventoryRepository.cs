@@ -1,38 +1,38 @@
 ﻿using System.Collections.Generic;
 
-/// <summary>
-/// Descripción breve de ItemRepository
-/// </summary>
-public class InventoryRepository : IItemRepository
+namespace HeavyMetalBakery.WCF
 {
-    private static Dictionary<string, int> _stock;
-
-    public InventoryRepository()
+    public class InventoryRepository : IItemRepository
     {
-        _stock = new Dictionary<string, int>() { { "B", 30 }, { "M", 36 }, { "C", 24 }, { "W", 1 } };
-    }
+        private readonly Dictionary<string, int> _stock;
 
-    public Item GetItem(string itemId)
-    {
-        if (!Exists(itemId))
-            return null;
-        return new Item
+        public InventoryRepository()
         {
-            ItemId = itemId,
-            Quantity = _stock[itemId]
-        };
-    }
+            _stock = new Dictionary<string, int>() { { "B", 30 }, { "M", 36 }, { "C", 24 }, { "W", 1 } };
+        }
 
-    public bool Save(Item item)
-    {
-        if (!Exists(item.ItemId))
-            return false;
-        _stock[item.ItemId] = item.Quantity;
-        return true;
-    }
+        public Item GetItem(string itemId)
+        {
+            if (!Exists(itemId))
+                return null;
+            return new Item
+            {
+                ItemId = itemId,
+                Quantity = _stock[itemId]
+            };
+        }
 
-    public bool Exists(string itemId)
-    {
-        return _stock.ContainsKey(itemId);
+        public bool Save(Item item)
+        {
+            if (!Exists(item.ItemId))
+                return false;
+            _stock[item.ItemId] = item.Quantity;
+            return true;
+        }
+
+        public bool Exists(string itemId)
+        {
+            return _stock.ContainsKey(itemId);
+        }
     }
 }

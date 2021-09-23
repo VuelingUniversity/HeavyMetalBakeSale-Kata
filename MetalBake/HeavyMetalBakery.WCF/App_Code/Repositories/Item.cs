@@ -1,5 +1,8 @@
-﻿public class Item
+﻿namespace HeavyMetalBakery.WCF
 {
-    public string ItemId { get; set; }
-    public int Quantity { get; set; }
+    public class Item
+    {
+        public string ItemId { get; set; }
+        public int Quantity { get; set; }
+    }
 }

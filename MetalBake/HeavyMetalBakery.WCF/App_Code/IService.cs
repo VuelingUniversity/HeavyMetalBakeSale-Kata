@@ -1,14 +1,21 @@
 ﻿using System.ServiceModel;
+using System.ServiceModel.Web;
 
-[ServiceContract]
-public interface IService
+namespace HeavyMetalBakery.WCF
 {
-    [OperationContract]
-    int CheckStock(string itemId);
+    [ServiceContract]
+    public interface IService
+    {
+        [OperationContract]
+        [WebGet(UriTemplate = "/CheckStock?itemId={itemId}")]
+        int CheckStock(string itemId);
 
-    [OperationContract]
-    void ReduceStock(string itemId);
+        [OperationContract]
+        [WebGet(UriTemplate = "/ReduceStock?itemId={itemId}")]
+        bool ReduceStock(string itemId);
 
-    [OperationContract]
-    void AddStock(string itemId, int amount);
+        [OperationContract]
+        [WebGet(UriTemplate = "AddStock?itemId={itemId}&amount={amount}")]
+        bool AddStock(string itemId, int amount);
+    }
 }

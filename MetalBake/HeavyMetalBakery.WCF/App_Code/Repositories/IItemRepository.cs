@@ -1,8 +1,11 @@
-﻿public interface IItemRepository
+﻿namespace HeavyMetalBakery.WCF
 {
-    Item GetItem(string itemId);
+    public interface IItemRepository
+    {
+        Item GetItem(string itemId);
 
-    bool Save(Item item);
+        bool Save(Item item);
 
-    bool Exists(string itemId);
+        bool Exists(string itemId);
+    }
 }

@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\MetalBake",
-    "\\MetalBake\\HeavyMetalBakery",
-    "\\MetalBake\\HeavyMetalBakery\\Domain",
-    "\\MetalBake\\HeavyMetalBakery\\Services"
+    ""
   ],
-  "SelectedNode": "\\MetalBake\\HeavyMetalBakery\\Services\\IStockService.cs",
+  "SelectedNode": "\\MetalBake.sln",
   "PreviewInSolutionExplorer": false
 }

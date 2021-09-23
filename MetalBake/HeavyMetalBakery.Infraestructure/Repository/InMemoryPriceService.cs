@@ -5,7 +5,7 @@ namespace HeavyMetalBakery.Infraestructure.Repository
 {
     public class InMemoryPriceService : IPriceService
     {
-        private static Dictionary<string, decimal> _prices;
+        private readonly Dictionary<string, decimal> _prices;
 
         public InMemoryPriceService()
         {

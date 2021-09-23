@@ -5,7 +5,7 @@ namespace eavyMetalBakery.Infraestructure.Repository
 {
     public class InMemoryStockService : IStockService
     {
-        private Dictionary<string, int> _stock;
+        private readonly Dictionary<string, int> _stock;
 
         public InMemoryStockService()
         {

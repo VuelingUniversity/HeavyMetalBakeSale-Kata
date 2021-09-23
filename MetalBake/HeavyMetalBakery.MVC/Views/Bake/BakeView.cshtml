@@ -1,0 +1,26 @@
+﻿@model HeavyMetalBakery.MVC.ViewModels.BakeViewModel
+
+@{
+    ViewBag.Title = "BakeView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Heavy Metal Bakery</h2>
+
+<table style="width:500px">
+    <tr>
+        <th>Sort</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    @foreach (var bake in Model.Bakes)
+    {
+        <tr>
+            <td>@bake.Sort</td>
+            <td>@bake.Name</td>
+            <td>@bake.Price</td>
+            <td>@bake.Quantity</td>
+        </tr>
+    }
+</table>
