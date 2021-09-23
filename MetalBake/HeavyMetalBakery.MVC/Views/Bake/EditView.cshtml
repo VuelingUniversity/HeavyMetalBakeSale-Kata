@@ -1,4 +1,4 @@
-﻿@model HeavyMetalBakery.MVC.ViewModels.BakeViewModel
+﻿@model HeavyMetalBakery.MVC.Models.Bake
 @{
     ViewBag.Title = "EditView";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,17 +6,13 @@
 
 <h2>Edit an item</h2>
 
-@using (Html.BeginForm("BakeView", "Bake", FormMethod.Post))
+@using (Html.BeginForm("SaveBake", "Bake", FormMethod.Post))
 {
     {
-        @Html.TextBoxFor(b => b.Bake.Sort)
-        <input type="hidden" name="Sort" .Index" value="@Model.Bake.Sort"><br/>
-        @Html.TextBoxFor(b => b.Bake.Name)
-        <input type="hidden" name="Name" .Index" value="@Model.Bake.Name"><br/>
-        @Html.TextBoxFor(b => b.Bake.Price)
-        <input type="hidden" name="Price" .Index" value="@Model.Bake.Price"><br/>
-        @Html.TextBoxFor(b => b.Bake.Quantity)
-        <input type="hidden" name="Quantity" .Index" value="@Model.Bake.Quantity"><br/>
-        <input type="submit"/>
+        @Html.TextBoxFor(b => b.Sort)<br />
+        @Html.TextBoxFor(b => b.Name)<br />
+        @Html.TextBoxFor(b => b.Price)<br />
+        @Html.TextBoxFor(b => b.Quantity)<br />
+        <input type="submit" value="Edit"/>
     }
 }

@@ -184,6 +184,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HeavyMetalBakery.Infraestructure\HeavyMetalBakery.Infraestructure.csproj">
+      <Project>{09ae676b-56eb-4b10-b3c9-923ee3fbab0a}</Project>
+      <Name>HeavyMetalBakery.Infraestructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeavyMetalBakery\HeavyMetalBakery.Core.csproj">
+      <Project>{9fdaadc2-dfe1-48dc-bd2a-719fe001af8f}</Project>
+      <Name>HeavyMetalBakery.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
