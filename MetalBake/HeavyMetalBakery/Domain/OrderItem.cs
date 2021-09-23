@@ -7,6 +7,7 @@
             ItemId = itemId;
             Amount = 1;
         }
+
         public int Amount { get; private set; }
         public decimal BasePrice { get; set; }
         public string ItemId { get; }

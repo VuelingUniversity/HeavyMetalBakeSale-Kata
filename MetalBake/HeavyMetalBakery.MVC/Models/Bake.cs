@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace HeavyMetalBakery.MVC.Models
+﻿namespace HeavyMetalBakery.MVC.Models
 {
     public class Bake
     {

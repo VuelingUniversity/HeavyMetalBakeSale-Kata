@@ -1,9 +1,6 @@
 ﻿using HeavyMetalBakery.MVC.Models;
 using HeavyMetalBakery.MVC.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace HeavyMetalBakery.MVC.Controllers
@@ -11,6 +8,7 @@ namespace HeavyMetalBakery.MVC.Controllers
     public class BakeController : Controller
     {
         private readonly List<Bake> _bakes = new List<Bake>();
+
         public ActionResult Index()
         {
             return View(_bakes);
@@ -29,6 +27,14 @@ namespace HeavyMetalBakery.MVC.Controllers
             {
                 Bakes = bakes
             };
+            return View(viewModel);
+        }
+
+        public ActionResult EditView(Bake bake)
+        {
+            var viewModel = new BakeViewModel();
+            viewModel.Bake = bake;
+
             return View(viewModel);
         }
     }
