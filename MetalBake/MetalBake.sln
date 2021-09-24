@@ -3,7 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake", "MetalBake\MetalBake.csproj", "{29460A5F-A4B2-4BEF-B16B-45E2F0F70965}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.core", "MetalBake.core\MetalBake.core.csproj", "{A3217396-6897-4F9A-96D6-85B941676357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.infra", "MetalBake.infra\MetalBake.infra.csproj", "{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.Web", "MetalBake.Web\MetalBake.Web.csproj", "{BBE24527-7A30-4CB2-BF59-535CBFB762F5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MetalBake.WCFstock", "MetalBake.WCFstock\", "{421F1D8A-F6CC-49C5-AFDE-5F15C7213880}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62806"
+		Debug.AspNetCompiler.PhysicalPath = "MetalBake.WCFstock\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62806\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62806"
+		Release.AspNetCompiler.PhysicalPath = "MetalBake.WCFstock\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62806\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62806"
+		SlnRelativePath = "MetalBake.WCFstock\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.ApiPrices", "MetalBake.ApiPrices\MetalBake.ApiPrices.csproj", "{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +39,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29460A5F-A4B2-4BEF-B16B-45E2F0F70965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29460A5F-A4B2-4BEF-B16B-45E2F0F70965}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29460A5F-A4B2-4BEF-B16B-45E2F0F70965}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29460A5F-A4B2-4BEF-B16B-45E2F0F70965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3217396-6897-4F9A-96D6-85B941676357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3217396-6897-4F9A-96D6-85B941676357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3217396-6897-4F9A-96D6-85B941676357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3217396-6897-4F9A-96D6-85B941676357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE24527-7A30-4CB2-BF59-535CBFB762F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE24527-7A30-4CB2-BF59-535CBFB762F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE24527-7A30-4CB2-BF59-535CBFB762F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE24527-7A30-4CB2-BF59-535CBFB762F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
