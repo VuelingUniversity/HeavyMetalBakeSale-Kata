@@ -7,8 +7,8 @@ namespace HeavyMetalBakery.Console
 {
     internal class Application
     {
-        private IPriceService _priceService;
-        private IStockService _stockService;
+        private readonly IPriceService _priceService;
+        private readonly IStockService _stockService;
 
         public Application(IStockService stockService, IPriceService priceService)
         {

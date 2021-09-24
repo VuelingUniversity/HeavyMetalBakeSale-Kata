@@ -1,4 +1,6 @@
-﻿namespace HeavyMetalBakery.WCF
+﻿using System.Collections.Generic;
+
+namespace HeavyMetalBakery.WCF
 {
     public interface IItemRepository
     {
@@ -7,5 +9,7 @@
         bool Save(Item item);
 
         bool Exists(string itemId);
+
+        Dictionary<string, int> GetStock();
     }
 }

@@ -17,5 +17,11 @@ namespace HeavyMetalBakery.WCF
         [OperationContract]
         [WebGet(UriTemplate = "AddStock?itemId={itemId}&amount={amount}")]
         bool AddStock(string itemId, int amount);
+
+        [OperationContract]
+        int[] GetStocks();
+
+        [OperationContract]
+        string[] GetShorts();
     }
 }

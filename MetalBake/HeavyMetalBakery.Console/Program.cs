@@ -1,10 +1,9 @@
-﻿using eavyMetalBakery.Infraestructure.Repository;
-using HeavyMetalBakery.Infraestructure.Repository;
+﻿using HeavyMetalBakery.Infraestructure.Repository;
 using HeavyMetalBakery.Services;
 
 namespace HeavyMetalBakery.Console
 {
-    internal class Program
+    internal static class Program
     {
         private static IStockService _stockService = new InMemoryStockService();
         private static IPriceService _priceService = new InMemoryPriceService();

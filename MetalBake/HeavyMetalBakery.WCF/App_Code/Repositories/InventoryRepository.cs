@@ -4,11 +4,23 @@ namespace HeavyMetalBakery.WCF
 {
     public class InventoryRepository : IItemRepository
     {
-        private readonly Dictionary<string, int> _stock;
+        private static readonly Dictionary<string, int> stock = Setup();
 
-        public InventoryRepository()
+        public static Dictionary<string, int> Stock { get { return stock; } }
+
+        private static Dictionary<string, int> Setup()
         {
-            _stock = new Dictionary<string, int>() { { "B", 30 }, { "M", 36 }, { "C", 24 }, { "W", 1 } };
+            var stockDatabase = new Dictionary<string, int>();
+            stockDatabase.Add("B", 30);
+            stockDatabase.Add("M", 30);
+            stockDatabase.Add("C", 30);
+            stockDatabase.Add("W", 30);
+            return stockDatabase;
+        }
+
+        public Dictionary<string, int> GetStock()
+        {
+            return Stock;
         }
 
         public Item GetItem(string itemId)
@@ -18,7 +30,7 @@ namespace HeavyMetalBakery.WCF
             return new Item
             {
                 ItemId = itemId,
-                Quantity = _stock[itemId]
+                Quantity = Stock[itemId]
             };
         }
 
@@ -26,13 +38,13 @@ namespace HeavyMetalBakery.WCF
         {
             if (!Exists(item.ItemId))
                 return false;
-            _stock[item.ItemId] = item.Quantity;
+            Stock[item.ItemId] = item.Quantity;
             return true;
         }
 
         public bool Exists(string itemId)
         {
-            return _stock.ContainsKey(itemId);
+            return Stock.ContainsKey(itemId);
         }
     }
 }

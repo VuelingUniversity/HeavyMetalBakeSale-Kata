@@ -35,6 +35,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.Console", "HeavyMetalBakery.Console\HeavyMetalBakery.Console.csproj", "{2244EEB0-0E24-4E60-BE2B-682B570C56E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.MVC", "HeavyMetalBakery.MVC\HeavyMetalBakery.MVC.csproj", "{CE0B0FED-2F16-4CC8-BE1B-2C9B879FEBAA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FAD1F0E4-0D5B-4EDC-947F-0AE47948479D} = {FAD1F0E4-0D5B-4EDC-947F-0AE47948479D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
