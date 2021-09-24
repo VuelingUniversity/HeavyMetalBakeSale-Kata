@@ -10,7 +10,7 @@ public interface IStockRepository
 {
     List<ItemStock> GetAllStock();
 
-    int GetItemStock(string itemId);
+    ItemStock GetItemStock(string itemId);
 
-    bool SetItemStock(string itemId, int cuantity);
+    void SetItemStock(ItemStock item);
 }

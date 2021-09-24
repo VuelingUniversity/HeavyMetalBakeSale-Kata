@@ -12,6 +12,6 @@ namespace MetalBake.ApiNames.Repositories
 
         List<ItemName> GetAllNames();
 
-        bool ChangeItemName(ItemName item);
+        void ChangeItemName(ItemName item);
     }
 }

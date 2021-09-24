@@ -12,6 +12,6 @@ namespace MetalBake.ApiPrices.Repositories
 
         List<ItemPrice> GetAllPrices();
 
-        bool UpdateItemPrice(ItemPrice item);
+        void UpdateItemPrice(ItemPrice item);
     }
 }
