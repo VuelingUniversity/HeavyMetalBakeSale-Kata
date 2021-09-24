@@ -9,21 +9,30 @@ using System.Text;
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
 {
-	public string GetData(int value)
-	{
-		return string.Format("You entered: {0}", value);
-	}
+    private IStockRepository _stockRepository = new StockRepository();
 
-	public CompositeType GetDataUsingDataContract(CompositeType composite)
-	{
-		if (composite == null)
-		{
-			throw new ArgumentNullException("composite");
-		}
-		if (composite.BoolValue)
-		{
-			composite.StringValue += "Suffix";
-		}
-		return composite;
-	}
+    public bool ExistsItem(string itemId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<ItemStock> GetAllStock()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int GetItemStock(string itemId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool ReduceItemStock(string itemId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public string SetItemStock(string itemId, int cuantity)
+    {
+        throw new NotImplementedException();
+    }
 }
