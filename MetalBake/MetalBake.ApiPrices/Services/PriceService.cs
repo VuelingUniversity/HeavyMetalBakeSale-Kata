@@ -13,22 +13,32 @@ namespace MetalBake.ApiPrices.Services
 
         public bool ExistsItem(string itemId)
         {
-            throw new NotImplementedException();
+            ItemPrice result = _priceRepository.GetItemPrice(itemId);
+            return itemId == result.ItemId;
         }
 
         public List<ItemPrice> GetAllPrices()
         {
-            throw new NotImplementedException();
+            return _priceRepository.GetAllPrices();
         }
 
         public ItemPrice GetItemPrice(string itemId)
         {
-            throw new NotImplementedException();
+            if (ExistsItem(itemId))
+            {
+                return null;
+            }
+            return _priceRepository.GetItemPrice(itemId);
         }
 
         public bool UpdateItemPrice(ItemPrice item)
         {
-            throw new NotImplementedException();
+            if (!ExistsItem(item.ItemId))
+            {
+                return false;
+            }
+            _priceRepository.UpdateItemPrice(item);
+            return true;
         }
     }
 }

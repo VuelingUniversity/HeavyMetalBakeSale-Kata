@@ -11,28 +11,40 @@ public class Service : IService
 {
     private IStockRepository _stockRepository = new StockRepository();
 
-    public bool ExistsItem(string itemId)
+    private bool ExistsItem(string itemId)
     {
-        throw new NotImplementedException();
+        ItemStock result = _stockRepository.GetItemStock(itemId);
+        return itemId == result.ItemId;
     }
 
     public List<ItemStock> GetAllStock()
     {
-        throw new NotImplementedException();
+        return _stockRepository.GetAllStock();
     }
 
-    public int GetItemStock(string itemId)
+    public ItemStock GetItemStock(string itemId)
     {
-        throw new NotImplementedException();
+        if (ExistsItem(itemId))
+        {
+            return null;
+        }
+        return _stockRepository.GetItemStock(itemId);
     }
 
-    public bool ReduceItemStock(string itemId)
+    public void ReduceItemStock(string itemId, int cuantity)
     {
-        throw new NotImplementedException();
+        ItemStock previousStock = GetItemStock(itemId);
+        ItemStock newStock = new ItemStock() { ItemId = itemId, Stock = previousStock.Stock - cuantity };
+        _stockRepository.SetItemStock(newStock);
     }
 
-    public string SetItemStock(string itemId, int cuantity)
+    public bool ChangeItemStock(ItemStock item)
     {
-        throw new NotImplementedException();
+        if (!ExistsItem(item.ItemId))
+        {
+            return false;
+        }
+        _stockRepository.SetItemStock(item);
+        return true;
     }
 }

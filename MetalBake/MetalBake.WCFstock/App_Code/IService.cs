@@ -14,14 +14,11 @@ public interface IService
     List<ItemStock> GetAllStock();
 
     [OperationContract]
-    int GetItemStock(string itemId);
+    ItemStock GetItemStock(string itemId);
 
     [OperationContract]
-    bool ReduceItemStock(string itemId);
+    void ReduceItemStock(string itemId, int cuantity);
 
     [OperationContract]
-    string SetItemStock(string itemId, int cuantity);
-
-    [OperationContract]
-    bool ExistsItem(string itemId);
+    bool ChangeItemStock(ItemStock item);
 }
