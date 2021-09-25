@@ -1,4 +1,5 @@
 ﻿using MetalBake.core.Models;
+using MetalBake.core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MetalBake.infra
 {
-    public class StockService
+    public class StockService : IStockService
     {
         private stockService.IService _stockService;
 
@@ -21,10 +22,10 @@ namespace MetalBake.infra
             return _stockService.GetAllStock().Select(item => new ItemStock { ItemId = item.ItemId, Stock = item.Stock }).ToList();
         }
 
-        public ItemStock GetItemStock(string itemId)
+        public int GetItemStock(string itemId)
         {
             var item = _stockService.GetItemStock(itemId);
-            return new ItemStock { ItemId = item.ItemId, Stock = item.Stock };
+            return item.Stock;
         }
 
         public void ReduceItemStock(string itemId, int cuantity)

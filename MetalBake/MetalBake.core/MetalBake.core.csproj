@@ -45,9 +45,10 @@
     <Compile Include="Models\ItemPrice.cs" />
     <Compile Include="Models\ItemStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\INameService.cs" />
+    <Compile Include="Services\IPriceService.cs" />
+    <Compile Include="Services\IStockService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
