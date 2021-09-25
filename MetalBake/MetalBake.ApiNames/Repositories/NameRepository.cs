@@ -10,7 +10,7 @@ namespace MetalBake.ApiNames.Repositories
 {
     public class NameRepository : INameRepository
     {
-        private static string _filePath = @"../../Files/names.json";
+        private static string _filePath = @"C:\Users\nettrim\Desktop\Proyectos\Files\names.json";
 
         private List<ItemName> ReadJsonFile()
         {

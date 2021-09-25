@@ -24,7 +24,7 @@ public class Service : IService
 
     public ItemStock GetItemStock(string itemId)
     {
-        if (ExistsItem(itemId))
+        if (!ExistsItem(itemId))
         {
             return null;
         }

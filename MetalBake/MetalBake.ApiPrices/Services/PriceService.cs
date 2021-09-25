@@ -24,7 +24,7 @@ namespace MetalBake.ApiPrices.Services
 
         public ItemPrice GetItemPrice(string itemId)
         {
-            if (ExistsItem(itemId))
+            if (!ExistsItem(itemId))
             {
                 return null;
             }

@@ -10,7 +10,7 @@ using System.Web;
 /// </summary>
 public class StockRepository : IStockRepository
 {
-    private static string _filePath = @"../../Files/stock.json";
+    private static string _filePath = @"C:\Users\nettrim\Desktop\Proyectos\Files\stock.json";
 
     private List<ItemStock> ReadJsonFile()
     {

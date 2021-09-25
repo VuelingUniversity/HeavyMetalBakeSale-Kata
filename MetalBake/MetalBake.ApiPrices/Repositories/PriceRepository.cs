@@ -10,7 +10,7 @@ namespace MetalBake.ApiPrices.Repositories
 {
     public class PriceRepository : IPriceRepository
     {
-        private static string _filePath = @"../../Files/prices.json";
+        private static string _filePath = @"C:\Users\nettrim\Desktop\Proyectos\Files\prices.json";
 
         private List<ItemPrice> ReadJsonFile()
         {

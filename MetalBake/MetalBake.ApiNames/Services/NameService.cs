@@ -24,7 +24,7 @@ namespace MetalBake.ApiNames.Services
 
         public ItemName GetItemName(string itemId)
         {
-            if (ExistsItem(itemId))
+            if (!ExistsItem(itemId))
             {
                 return null;
             }
