@@ -38,12 +38,13 @@ namespace MetalBake.infra
             }
         }
 
-        public bool ChangeItemName(ItemName item)
+        public bool ChangeItemName(string itemId, string name)
         {
             using (WebClient client = new WebClient())
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
+                var item = new ItemName { ItemId = itemId, Name = name };
                 var bodyJson = JsonConvert.SerializeObject(item);
                 var ApiResponse = client.UploadString($"{_apiUrl}/changeName", bodyJson);
                 return bool.Parse(ApiResponse);

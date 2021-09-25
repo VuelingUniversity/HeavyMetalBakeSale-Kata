@@ -38,12 +38,13 @@ namespace MetalBake.infra
             }
         }
 
-        public bool UpdateItemPrice(ItemPrice item)
+        public bool UpdateItemPrice(string itemId, decimal price)
         {
             using (WebClient client = new WebClient())
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
+                var item = new ItemPrice { ItemId = itemId, Price = price };
                 var bodyJson = JsonConvert.SerializeObject(item);
                 var ApiResponse = client.UploadString($"{_apiUrl}/updatePrice", bodyJson);
                 return bool.Parse(ApiResponse);

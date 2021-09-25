@@ -13,6 +13,6 @@ namespace MetalBake.core.Services
 
         decimal GetItemPrice(string itemId);
 
-        bool UpdateItemPrice(ItemPrice item);
+        bool UpdateItemPrice(string itemId, decimal price);
     }
 }
