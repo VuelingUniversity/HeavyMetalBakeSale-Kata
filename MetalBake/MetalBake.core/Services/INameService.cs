@@ -13,6 +13,6 @@ namespace MetalBake.core.Services
 
         string GetItemName(string itemId);
 
-        bool ChangeItemName(ItemName item);
+        bool ChangeItemName(string itemId, string name);
     }
 }
