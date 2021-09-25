@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "GoToCart";
+}
+
+<h3>Resumen del pedido:</h3>
+<ol>
+    @foreach (var item in collection)
+    {
+        <li>@item.Name @item.Cuantity @item.Price*@item.Cuantity</li>
+    }
+</ol>
+<p>Precio total: xx €</p>
+@using (Html.BeginForm("MakeAnOrder", "Order"))
+{
+    <p>Cantidad a pagar: <input type="number" /></p>
+    <input type="submit" value="Pagar" />
+}

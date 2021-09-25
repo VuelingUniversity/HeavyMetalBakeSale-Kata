@@ -128,7 +128,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ItemPrice.cs" />
+    <Compile Include="Models\ItemsList.cs" />
     <Compile Include="Models\ItemStock.cs" />
+    <Compile Include="Models\OrderForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +174,7 @@
     <Content Include="Views\Price\Edit.cshtml" />
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\GoToCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,6 +194,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MetalBake.ApplicationServices\MetalBake.ApplicationServices.csproj">
+      <Project>{54259567-4488-44a3-a233-8238772d603f}</Project>
+      <Name>MetalBake.ApplicationServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetalBake.core\MetalBake.core.csproj">
       <Project>{a3217396-6897-4f9a-96d6-85b941676357}</Project>
       <Name>MetalBake.core</Name>
