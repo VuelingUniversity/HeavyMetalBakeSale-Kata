@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.core", "MetalBake.core\MetalBake.core.csproj", "{A3217396-6897-4F9A-96D6-85B941676357}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.infra", "MetalBake.infra\MetalBake.infra.csproj", "{EF95C70C-1C12-42DD-BD74-3D89F2CFFA38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880} = {421F1D8A-F6CC-49C5-AFDE-5F15C7213880}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.Web", "MetalBake.Web\MetalBake.Web.csproj", "{BBE24527-7A30-4CB2-BF59-535CBFB762F5}"
 EndProject
@@ -31,9 +34,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MetalBake.WCFstock", "Metal
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.ApiPrices", "MetalBake.ApiPrices\MetalBake.ApiPrices.csproj", "{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetalBake.ApiPrices", "MetalBake.ApiPrices\MetalBake.ApiPrices.csproj", "{19A636B7-8296-4B21-BA67-FFC2D3B0B94D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.ApiNames", "MetalBake.ApiNames\MetalBake.ApiNames.csproj", "{353C6182-B1D7-4418-A7D7-11F0DF435C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetalBake.ApiNames", "MetalBake.ApiNames\MetalBake.ApiNames.csproj", "{353C6182-B1D7-4418-A7D7-11F0DF435C62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

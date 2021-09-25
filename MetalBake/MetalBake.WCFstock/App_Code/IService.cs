@@ -20,5 +20,5 @@ public interface IService
     void ReduceItemStock(string itemId, int cuantity);
 
     [OperationContract]
-    bool ChangeItemStock(ItemStock item);
+    bool ChangeItemStock(string itemId, int cuantity);
 }

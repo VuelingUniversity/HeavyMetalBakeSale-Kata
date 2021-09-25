@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MetalBake.infra
 {
-    public class Class1
+    public class PriceService
     {
+        private readonly string _apiUrl = "https://localhost:44333/prices";
     }
 }

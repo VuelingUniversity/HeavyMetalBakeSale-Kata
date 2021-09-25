@@ -38,12 +38,13 @@ public class Service : IService
         _stockRepository.SetItemStock(newStock);
     }
 
-    public bool ChangeItemStock(ItemStock item)
+    public bool ChangeItemStock(string itemId, int cuantity)
     {
-        if (!ExistsItem(item.ItemId))
+        if (!ExistsItem(itemId))
         {
             return false;
         }
+        ItemStock item = new ItemStock { ItemId = itemId, Stock = cuantity };
         _stockRepository.SetItemStock(item);
         return true;
     }

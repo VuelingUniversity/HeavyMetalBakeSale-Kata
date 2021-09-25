@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MetalBake.core
+namespace MetalBake.infra
 {
-    public class Class1
+    public class NameService
     {
+        private readonly string _apiUrl = "https://localhost:44375/name";
     }
 }

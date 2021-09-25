@@ -26,7 +26,7 @@ namespace MetalBake.ApiNames.Controllers
             return _nameService.GetItemName(itemId);
         }
 
-        [Route("updatePrice")]
+        [Route("changeName")]
         [HttpPost]
         public bool ChangeItemName(ItemName item)
         {
