@@ -1,0 +1,10 @@
+﻿@font-face {
+    font-family: metallica-font;
+    src: url(../fonts/metallica.TTF);
+}
+
+.metal-title {
+    font-family: metallica-font;
+    font-size: 170px;
+    margin-left: 60px;
+}

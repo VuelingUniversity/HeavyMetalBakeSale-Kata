@@ -127,10 +127,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChangeForm.cs" />
+    <Compile Include="Models\ChangeView.cs" />
     <Compile Include="Models\ItemPrice.cs" />
     <Compile Include="Models\ItemsList.cs" />
     <Compile Include="Models\ItemStock.cs" />
     <Compile Include="Models\OrderForm.cs" />
+    <Compile Include="Models\OrderView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,12 +141,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\metalbake.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\metallica.TTF" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -175,6 +180,9 @@
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\GoToCart.cshtml" />
+    <Content Include="Views\Order\AddToCart.cshtml" />
+    <Content Include="Views\Order\MakeAnOrder.cshtml" />
+    <Content Include="Views\Order\GiveChange.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

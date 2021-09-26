@@ -3,14 +3,14 @@
     ViewBag.Title = "Edit";
 }
 
-<<h2>Editar precio</h2>
+<h2>Editar precio de @Model.ItemId</h2>
 
 @using (Html.BeginForm("SetNewPrice", "Price"))
 {
-    @Html.Label("Id")
-    @Html.TextBoxFor(item => item.ItemId, new { @readonly = "readonly" })
-    @Html.Label("Cambia el precio")
-    @Html.TextBoxFor(item => item.Price)
+    @Html.HiddenFor(item => item.ItemId)
 
-    <input type="submit" value="Cambiar" />
+    <div class="form-inline">
+        @Html.TextBoxFor(item => item.Price, new { @class = "form-control" })
+        <input type="submit" value="Cambiar" class="btn btn-primary" />
+    </div>
 }

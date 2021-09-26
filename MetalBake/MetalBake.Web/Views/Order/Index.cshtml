@@ -4,13 +4,17 @@
 }
 
 <h2>Listado de productos</h2>
-@using (Html.BeginForm("GoToCart", "Order"))
+@using (Html.BeginForm("AddToCart", "Order"))
 {
-    <ul>
-        @foreach (var item in Model.ListOfItems)
-        {
-            <li>@item.ItemId @item.Name @item.Price @item.Stock <input type="number" name="Quantit_@item.ItemId" /> </li>
-        }
-    </ul>
-    <input type="submit" value="Añadir al carrito" />
+
+    <div class="form-inline">
+        <select name="itemId" class="form-control">
+            @foreach (var item in Model.ListOfItems)
+            {
+                <option value="@item.ItemId">@item.Name Precio: @item.Price Stock: @item.Stock </option>
+            }
+        </select>
+        <input type="number" name="Quantity" class="form-control" />
+        <input type="submit" value="Añadir al carrito" class="btn btn-primary" />
+    </div>
 }

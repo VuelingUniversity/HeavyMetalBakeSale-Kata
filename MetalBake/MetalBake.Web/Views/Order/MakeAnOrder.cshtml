@@ -1,0 +1,44 @@
+﻿@model MetalBake.Web.Models.OrderView
+
+@{
+    ViewBag.Title = "MakeAnOrder";
+}
+
+@if (Model.Errors == null)
+{
+    <h2> Resumen de pedido </h2>
+    <ul>
+        @foreach (var item in Model.Summary)
+        {
+            <li>@item </li>
+        }
+    </ul>
+
+    using (Html.BeginForm("GiveChange", "Order"))
+    {
+        <h2>Pagar pedido</h2>
+        <p>Introduce cantidad para pagar</p>
+        <input type="hidden" name="Total" value="@Model.TotalPrice" />
+        <div class="form-inline">
+            <input type="number" class="form-control" name="Amount" />
+            <input type="submit" value="Calcular cambio" class="btn btn-primary" />
+        </div>
+    }
+
+}
+else
+{
+
+    <div class="alert alert-danger" role="alert">
+        <p><strong>Error</strong> No se ha podido procesar tu pedido</p>
+        <ul>
+            @foreach (var error in Model.Errors)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    </div>
+
+    @Html.ActionLink("Hacer otro pedido", "Index", "Order", new { @class = "btn btn-primary" })
+
+}

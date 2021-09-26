@@ -9,7 +9,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <style>
+        .navbar-inverse .navbar-nav > li > a {
+            color: #cbbde2;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #cbbde2;
+        }
+    </style>
+    <div class="navbar  navbar-inverse navbar-fixed-top" style="background-color:#563d7c">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -29,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="margin-top:50px">
         @RenderBody()
         <hr />
         <footer>

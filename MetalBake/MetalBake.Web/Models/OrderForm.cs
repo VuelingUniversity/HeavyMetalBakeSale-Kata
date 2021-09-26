@@ -7,9 +7,7 @@ namespace MetalBake.Web.Models
 {
     public class OrderForm
     {
-        public int Quantity_B { get; set; }
-        public int Quantity_C { get; set; }
-        public int Quantity_M { get; set; }
-        public int Quantity_W { get; set; }
+        public string ItemId { get; set; }
+        public int Quantity { get; set; }
     }
 }
