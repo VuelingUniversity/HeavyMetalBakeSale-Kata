@@ -4,5 +4,14 @@
     ViewBag.Title = "ChangeView";
 }
 
-<h2>Gracias por tu compra</h2>
-<h3>Tu cambio es @Model.Change€</h3>
+@if (Model.Change >= 0)
+{
+    <h2>Gracias por tu compra</h2>
+    <h3>Tu cambio es @Model.Change€</h3>
+
+}
+else
+{
+    <div class="alert alert-danger"><strong>No se ha introducido suficiente dinero. Faltan @Math.Abs(Model.Change) €</strong></div>
+
+}

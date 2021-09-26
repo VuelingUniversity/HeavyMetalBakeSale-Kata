@@ -15,13 +15,6 @@ namespace MetalBake.ApplicationServices
         private IPriceService _priceService = new PriceService();
         private IStockService _stockService = new StockService();
 
-        //public ItemService(INameService nameService, IPriceService priceService, IStockService stockService)
-        //{
-        //    _nameService = nameService;
-        //    _priceService = priceService;
-        //    _stockService = stockService;
-        //}
-
         public List<Item> GetAllItems()
         {
             List<Item> ListOfItems = new List<Item>();
