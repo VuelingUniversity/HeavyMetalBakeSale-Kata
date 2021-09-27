@@ -1,0 +1,23 @@
+﻿@using MetalBakeMVC.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Product>
+
+<table class="table">
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (Product product in Model)
+    {
+        <tr class="align-content-center">
+            <td><img class="imgSize" src=@product.Img /></td>
+            <th>@product.Name</th>
+            <th>@product.Price</th>
+            <td>@Html.ActionLink("Buy", "ReduceProduct", "Stock", new { name = product.Name }, null)</td>
+        </tr>
+    }
+</table>
