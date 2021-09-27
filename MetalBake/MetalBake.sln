@@ -54,6 +54,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.core.UnitTest", "MetalBake.core.UnitTest\MetalBake.core.UnitTest.csproj", "{EB94E6E2-A9FA-4EFB-B23E-3822AFE3D393}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBake.ApplicationService.UnitTest", "MetalBake.ApplicationService.UnitTest\MetalBake.ApplicationService.UnitTest.csproj", "{493B6998-2EE7-4AA4-987C-8F6DDA0755FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{421F1D8A-F6CC-49C5-AFDE-5F15C7213880} = {421F1D8A-F6CC-49C5-AFDE-5F15C7213880}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Services", "External Services", "{5AD2A005-F1FE-4FE5-9DA2-51F74D7A9DA7}"
 EndProject
