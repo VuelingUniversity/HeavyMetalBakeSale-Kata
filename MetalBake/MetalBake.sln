@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.MVC", "Hea
 		{FAD1F0E4-0D5B-4EDC-947F-0AE47948479D} = {FAD1F0E4-0D5B-4EDC-947F-0AE47948479D}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyMetalBakery.API", "HeavyMetalBakery.API\HeavyMetalBakery.API.csproj", "{DFDB287F-AB22-4D6C-A8F5-524AE482C187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{CE0B0FED-2F16-4CC8-BE1B-2C9B879FEBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0B0FED-2F16-4CC8-BE1B-2C9B879FEBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0B0FED-2F16-4CC8-BE1B-2C9B879FEBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDB287F-AB22-4D6C-A8F5-524AE482C187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDB287F-AB22-4D6C-A8F5-524AE482C187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDB287F-AB22-4D6C-A8F5-524AE482C187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDB287F-AB22-4D6C-A8F5-524AE482C187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

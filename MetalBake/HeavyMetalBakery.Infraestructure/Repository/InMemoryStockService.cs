@@ -15,7 +15,7 @@ namespace HeavyMetalBakery.Infraestructure.Repository
         public void AddStock(string itemId, int amount)
         {
             if (Exists(itemId))
-                _stock[itemId] += amount;           
+                _stock[itemId] += amount;
         }
 
         public bool CheckStock(string itemId)

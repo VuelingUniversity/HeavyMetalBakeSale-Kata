@@ -9,9 +9,9 @@
 @using (Html.BeginForm("SaveBake", "Bake", FormMethod.Post))
 {
     {
-@Html.TextBoxFor(b => b.Sort)
+@Html.TextBoxFor(b => b.Sort, new { @readonly = "readonly" })
 <br />
-@Html.TextBoxFor(b => b.Name)
+@Html.TextBoxFor(b => b.Name, new { @readonly = "readonly" })
 <br />
 @Html.TextBoxFor(b => b.Price)
 <br />

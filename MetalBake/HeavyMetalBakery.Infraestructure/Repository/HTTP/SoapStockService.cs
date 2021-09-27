@@ -1,4 +1,5 @@
-﻿using HeavyMetalBakery.Services;
+﻿using HeavyMetalBakery.Infraestructure.Inventory.WCF;
+using HeavyMetalBakery.Services;
 using System;
 
 namespace HeavyMetalBakery.Infraestructure.Repository.HTTP
@@ -7,18 +8,20 @@ namespace HeavyMetalBakery.Infraestructure.Repository.HTTP
     {
         public void AddStock(string itemId, int amount)
         {
-            Inventory.WCF.IService wcfService = new Inventory.WCF.ServiceClient();
+            IService wcfService = new ServiceClient();
             wcfService.AddStock(itemId, amount);
         }
 
         public bool CheckStock(string itemId)
         {
-            throw new NotImplementedException();
+            IService wcfService = new ServiceClient();
+            return (wcfService.CheckStock(itemId) > 0);
         }
 
         public void ReduceStock(string itemId)
         {
-            throw new NotImplementedException();
+            IService wcfService = new ServiceClient();
+            wcfService.ReduceStock(itemId);
         }
     }
 }

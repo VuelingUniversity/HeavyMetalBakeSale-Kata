@@ -17,16 +17,21 @@
     </tr>
     @foreach (var bake in Model.Bakes)
     {
-    <tr>
-        <td>@bake.Sort</td>
-        <td>@bake.Name</td>
-        <td>@bake.Price</td>
-        <td>@bake.Quantity</td>
-        <td>
-            <input type="button" value="Edit" onclick="location.href =
+        <tr>
+            <td>@bake.Sort</td>
+            <td>@bake.Name</td>
+            <td>@bake.Price</td>
+            <td>@bake.Quantity</td>
+            <td>
+                <input type="button" value="Edit" onclick="location.href =
         '@Url.Action("EditView", "Bake",
         new HeavyMetalBakery.MVC.Models.Bake {Sort = bake.Sort, Name = bake.Name, Price = bake.Price, Quantity = bake.Quantity})'" />
-        </td>
-    </tr>
+            </td>
+            <td>
+                <input type="button" value="Add to cart" onclick="location.href =
+        '@Url.Action("AddToCart", "Bake",
+        new HeavyMetalBakery.MVC.Models.Bake {Sort = bake.Sort, Price = bake.Price, Quantity = bake.Quantity})'" />
+            </td>
+        </tr>
     }
 </table>
