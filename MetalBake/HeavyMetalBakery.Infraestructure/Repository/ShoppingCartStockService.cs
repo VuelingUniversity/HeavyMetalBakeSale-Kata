@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeavyMetalBakery.Infraestructure.Repository
 {
@@ -14,6 +12,7 @@ namespace HeavyMetalBakery.Infraestructure.Repository
     {
         private readonly string _url = @"C:\Users\pginer\Source\Repos\HeavyMetalBake\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.txt";
         private readonly IPriceService _priceService = new InMemoryPriceService();
+
         public void AddStock(string itemId, int amount)
         {
             var jsonData = System.IO.File.ReadAllText(_url);
@@ -25,15 +24,13 @@ namespace HeavyMetalBakery.Infraestructure.Repository
                 itemsToCart.Add(new OrderItem(itemId)
                 {
                     Amount = 1,
-                    BasePrice = _priceService.GetPrice(itemId),                   
+                    BasePrice = _priceService.GetPrice(itemId),
                 });
             }
             else return;
-            
 
             jsonData = JsonConvert.SerializeObject(itemsToCart, Formatting.Indented);
             File.WriteAllText(_url, jsonData);
-            
         }
 
         public bool CheckStock(string itemId)
@@ -49,8 +46,17 @@ namespace HeavyMetalBakery.Infraestructure.Repository
         public List<OrderItem> GetCart()
         {
             string itemsJson = File.ReadAllText(_url);
-            var items = JsonConvert.DeserializeObject<List<OrderItem>>(itemsJson);
-            return items;
+            var tempItems = JsonConvert.DeserializeObject<List<OrderItem>>(itemsJson);
+            List<OrderItem> finalItems = new List<OrderItem>();
+            foreach (var item in tempItems)
+            {
+                var ol = finalItems.FirstOrDefault(l => l.ItemId == item.ItemId);
+                if (ol == null)
+                    finalItems.Add(item);
+                else
+                    ol.IncreaseAmount();
+            }
+            return finalItems;
         }
     }
 }

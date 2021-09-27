@@ -5,7 +5,7 @@ namespace HeavyMetalBakery.Domain
 {
     public class Order
     {
-        private List<OrderItem> _listOfItems;
+        private List<OrderItem> _listOfItems { get; set; }
 
         public Order()
         {
@@ -14,6 +14,10 @@ namespace HeavyMetalBakery.Domain
 
         public decimal AmountToPay { get { return _listOfItems.Sum(i => i.TotalPrice); } }
         public IEnumerable<OrderItem> OrderItems { get { return _listOfItems; } }
+        public void setOrderItems(List<OrderItem> list)
+        {
+            _listOfItems = list;
+        }
 
         public void AddItems(string[] itemIds)
         {

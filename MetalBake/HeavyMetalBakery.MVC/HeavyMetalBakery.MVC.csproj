@@ -136,6 +136,7 @@
     <Compile Include="Models\Bake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BakeViewModel.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\Inventory.WCF\Service.disco" />

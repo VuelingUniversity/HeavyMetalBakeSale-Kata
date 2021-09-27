@@ -1,6 +1,5 @@
 ﻿using HeavyMetalBakery.Infraestructure.Inventory.WCF;
 using HeavyMetalBakery.Services;
-using System;
 
 namespace HeavyMetalBakery.Infraestructure.Repository.HTTP
 {

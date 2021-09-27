@@ -9,14 +9,14 @@
 @using (Html.BeginForm("SaveBake", "Bake", FormMethod.Post))
 {
     {
-@Html.TextBoxFor(b => b.Sort, new { @readonly = "readonly" })
-<br />
-@Html.TextBoxFor(b => b.Name, new { @readonly = "readonly" })
-<br />
-@Html.TextBoxFor(b => b.Price)
-<br />
-@Html.TextBoxFor(b => b.Quantity)
-<br />
-<input type="submit" value="Edit" />
+        @Html.TextBoxFor(b => b.Sort, new { @readonly = "readonly" })
+        <br />
+        @Html.TextBoxFor(b => b.Name, new { @readonly = "readonly" })
+        <br />
+        @Html.TextBoxFor(b => b.Price)
+        <br />
+        @Html.TextBoxFor(b => b.Quantity)
+        <br />
+        <input type="submit" value="Edit" />
     }
 }

@@ -36,7 +36,7 @@ namespace HeavyMetalBakery.MVC.Controllers
                     names[i] = "Water";
             }
 
-            var viewModel = new BakeViewModel{Bakes = new List<Bake>()};
+            var viewModel = new BakeViewModel { Bakes = new List<Bake>() };
             for (int i = 0; i < names.Length; i++)
             {
                 viewModel.Bakes.Add(new Bake { Sort = shorts[i], Name = names[i], Price = _priceService.GetPrice(shorts[i]), Quantity = stocks[i] });
