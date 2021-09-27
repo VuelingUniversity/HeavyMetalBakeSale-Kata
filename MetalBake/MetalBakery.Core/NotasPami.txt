@@ -1,0 +1,14 @@
+﻿En el Core debe ir:
+DOMINIOS Y SERVICIOS
+DOMINIO: Es una especie de modelo y todo lo que se puede hacer sobre él.(no tiene porque tener Id)
+Pej: una cuenta bancaria
+- Una cuenta bancaria tiene su IBAN, algun campo para hacer calculos etc, me lo invento,
+- tiene Las operaciones que le convienen como "individuo": Aumentar la cuenta, disminuirla
+SERVICIO: Algo externo al dominio, como una subcontrata. Sirve pa conectar cosas con otras cosas
+
+En este caso;
+DOMAIN:
+Orders: Puede añadir items, quitarlos, etc
+SERVICE:
+ICalculatorPriceService: Conectara con un servicio externo para obtener los precios de los elementos 
+Conecta con el proyecto de infraestructura

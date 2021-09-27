@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MetalBakery.Core.Domain
+namespace MetalBakery.Core.Services
 {
-    class Items
+    public interface IStockServices
     {
     }
 }

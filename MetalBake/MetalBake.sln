@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBakery.API", "MetalBak
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBakery.Core", "MetalBakery.Core\MetalBakery.Core.csproj", "{FC4AE55A-BAEC-4E47-9585-39FD44599532}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalBakery.Infraestructure", "MetalBakery.Infraestructure\MetalBakery.Infraestructure.csproj", "{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{FC4AE55A-BAEC-4E47-9585-39FD44599532}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC4AE55A-BAEC-4E47-9585-39FD44599532}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC4AE55A-BAEC-4E47-9585-39FD44599532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{662956E9-9001-4059-8422-4309DCD86AE4} = {CAC0DC8C-2D19-41BF-B014-2C11A9102599}
 		{06803F1E-2478-4CDE-88F8-C0943651A1E0} = {411AC267-8087-4B14-863A-D555EE71B5C1}
 		{FC4AE55A-BAEC-4E47-9585-39FD44599532} = {A6182FED-1F3E-4C14-92F1-B917BA5BC896}
+		{4E48911D-F1F2-44E6-A731-AD21ECBD0EA9} = {EDC33BC5-3849-4B1C-9764-8D9CDE204AA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7169CBAC-2B6F-4596-BDA2-BD8370BBEAEA}
