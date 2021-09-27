@@ -11,7 +11,12 @@ namespace MetalBake.Web.Controllers
 {
     public class StockController : Controller
     {
-        private IStockService _stockService = new StockService();
+        private IStockService _stockService;
+
+        public StockController()
+        {
+            _stockService = new StockService();
+        }
 
         // GET: Stock
         public ActionResult Index()

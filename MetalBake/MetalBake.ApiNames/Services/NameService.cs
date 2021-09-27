@@ -9,7 +9,12 @@ namespace MetalBake.ApiNames.Services
 {
     public class NameService : INameService
     {
-        private INameRepository _nameRepository = new NameRepository();
+        private INameRepository _nameRepository;
+
+        public NameService()
+        {
+            _nameRepository = new NameRepository();
+        }
 
         public bool ExistsItem(string itemId)
         {

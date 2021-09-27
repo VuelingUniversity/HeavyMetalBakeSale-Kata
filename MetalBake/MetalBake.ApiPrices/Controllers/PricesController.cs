@@ -12,7 +12,12 @@ namespace MetalBake.ApiPrices.Controllers
     [Route("[controller]")]
     public class PricesController : ControllerBase
     {
-        private IPriceService _priceService = new PriceService();
+        private IPriceService _priceService;
+
+        public PricesController()
+        {
+            _priceService = new PriceService();
+        }
 
         [HttpGet]
         public List<ItemPrice> GetAllPrices()

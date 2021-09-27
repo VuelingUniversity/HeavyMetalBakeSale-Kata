@@ -12,7 +12,12 @@ namespace MetalBake.ApiNames.Controllers
     [Route("[controller]")]
     public class NameController : ControllerBase
     {
-        private INameService _nameService = new NameService();
+        private INameService _nameService;
+
+        public NameController()
+        {
+            _nameService = new NameService();
+        }
 
         [HttpGet]
         public List<ItemName> GetAllNames()

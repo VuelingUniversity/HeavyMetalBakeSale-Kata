@@ -9,7 +9,12 @@ using System.Text;
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
 {
-    private IStockRepository _stockRepository = new StockRepository();
+    private IStockRepository _stockRepository;
+
+    public Service()
+    {
+        _stockRepository = new StockRepository();
+    }
 
     private bool ExistsItem(string itemId)
     {

@@ -9,7 +9,12 @@ namespace MetalBake.ApiPrices.Services
 {
     public class PriceService : IPriceService
     {
-        private IPriceRepository _priceRepository = new PriceRepository();
+        private IPriceRepository _priceRepository;
+
+        public PriceService()
+        {
+            _priceRepository = new PriceRepository();
+        }
 
         public bool ExistsItem(string itemId)
         {

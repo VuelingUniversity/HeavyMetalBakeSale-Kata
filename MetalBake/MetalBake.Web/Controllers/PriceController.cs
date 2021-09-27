@@ -11,7 +11,12 @@ namespace MetalBake.Web.Controllers
 {
     public class PriceController : Controller
     {
-        private IPriceService _priceService = new PriceService();
+        private IPriceService _priceService;
+
+        public PriceController()
+        {
+            _priceService = new PriceService();
+        }
 
         // GET: Price
         public ActionResult Index()
