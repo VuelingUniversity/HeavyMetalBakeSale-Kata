@@ -13,8 +13,14 @@ namespace MetalBake.Web.Controllers
 {
     public class OrderController : Controller
     {
-        private IItemService _itemService = new ItemService();
-        private IOrderService _orderService = new OrderService();
+        private IItemService _itemService;
+        private IOrderService _orderService;
+
+        public OrderController()
+        {
+            _itemService = new ItemService();
+            _orderService = new OrderService();
+        }
 
         // GET: Order
         public ActionResult Index()
@@ -26,7 +32,6 @@ namespace MetalBake.Web.Controllers
 
         public ActionResult AddToCart(OrderForm orderForm)
         {
-            //if(viewBag.Items == null)
             List<Tuple<string, int>> order;
             if (HttpContext.Session["items"] == null)
             {
@@ -34,23 +39,20 @@ namespace MetalBake.Web.Controllers
             }
             else
             {
-                //order = viewBag.Items as List<Tuple<string, int>>
                 order = HttpContext.Session["items"] as List<Tuple<string, int>>;
             }
-            // order.Add(new Tuple<string, int>(orderForm.ItemId, orderForm.Quantity));
             order.Add(new Tuple<string, int>(orderForm.ItemId, orderForm.Quantity));
-            // viewBag.Items = order;
+
             HttpContext.Session["items"] = order;
             return View();
         }
 
-        public ActionResult MakeAnOrder()
+        public ActionResult MakeAnOrder(List<Tuple<string, int>> items)
         {
-            //orderForms = viewBag.Items as List<Tuple<string, int>>
             List<Tuple<string, int>> orderForms = HttpContext.Session["items"] as List<Tuple<string, int>>;
             Order order = _orderService.CreateOrder(orderForms);
             List<string> errors = _orderService.ProcessOrder(order);
-            // viewBag.Items = null
+
             HttpContext.Session["items"] = null;
 
             OrderView view = new OrderView { Summary = order.GetSummary(), Errors = errors, TotalPrice = order.CalculateOrderPrice() };

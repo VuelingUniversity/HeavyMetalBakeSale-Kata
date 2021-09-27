@@ -11,9 +11,16 @@ namespace MetalBake.ApplicationServices
 {
     public class ItemService : IItemService
     {
-        private INameService _nameService = new NameService();
-        private IPriceService _priceService = new PriceService();
-        private IStockService _stockService = new StockService();
+        private INameService _nameService;
+        private IPriceService _priceService;
+        private IStockService _stockService;
+
+        public ItemService()
+        {
+            _nameService = new NameService();
+            _priceService = new PriceService();
+            _stockService = new StockService();
+        }
 
         public List<Item> GetAllItems()
         {

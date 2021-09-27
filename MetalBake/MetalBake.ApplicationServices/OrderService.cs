@@ -11,8 +11,14 @@ namespace MetalBake.ApplicationServices
 {
     public class OrderService : IOrderService
     {
-        private IPriceService _priceService = new PriceService();
-        private IStockService _stockService = new StockService();
+        private IPriceService _priceService;
+        private IStockService _stockService;
+
+        public OrderService()
+        {
+            _priceService = new PriceService();
+            _stockService = new StockService();
+        }
 
         public Order CreateOrder(List<Tuple<string, int>> itemsQuantity)
         {
