@@ -1,0 +1,23 @@
+﻿@model List<MetalBakeMVC.ViewModels.StockData>
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Stock</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Total</td>
+            <td>
+                <p>Amount</p>
+                <asp:TextBox ID="txtNickname" runat="server" />
+            </td>
+
+            <td class="">@Html.ActionLink("Add", "AddProduct", "Stock", new { name = product.Name }, null)</td>
+            <td>@Html.ActionLink("Reduce", "ReduceProduct", "Stock", new { name = product.Name }, null)</td>
+        </tr>
+    }
+</table>
