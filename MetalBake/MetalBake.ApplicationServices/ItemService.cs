@@ -19,14 +19,12 @@ namespace MetalBake.ApplicationServices
         {
             List<Item> ListOfItems = new List<Item>();
             var itemNames = _nameService.GetAllNames();
-            var itemPrices = _priceService.GetAllPrices();
-            var itemStocks = _stockService.GetAllStock();
 
             foreach (var item in itemNames)
             {
-                var price = itemPrices.FirstOrDefault(i => i.ItemId == item.ItemId);
-                var stock = itemStocks.FirstOrDefault(i => i.ItemId == item.ItemId);
-                var newItem = new Item { ItemId = item.ItemId, Name = item.Name, Price = price.Price, Stock = stock.Stock };
+                var price = _priceService.GetItemPrice(item.ItemId);
+                var stock = _stockService.GetItemStock(item.ItemId);
+                var newItem = new Item { ItemId = item.ItemId, Name = item.Name, Price = price, Stock = stock };
                 ListOfItems.Add(newItem);
             }
 

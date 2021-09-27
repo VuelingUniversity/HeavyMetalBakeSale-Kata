@@ -179,7 +179,6 @@
     <Content Include="Views\Price\Edit.cshtml" />
     <Content Include="Views\Price\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
-    <Content Include="Views\Order\GoToCart.cshtml" />
     <Content Include="Views\Order\AddToCart.cshtml" />
     <Content Include="Views\Order\MakeAnOrder.cshtml" />
     <Content Include="Views\Order\GiveChange.cshtml" />
