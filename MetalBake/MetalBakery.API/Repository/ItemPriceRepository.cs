@@ -1,4 +1,5 @@
 ﻿using MetalBakery.API.Dto;
+using MetalBakery.API.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace MetalBakery.API.Repository
     public class ItemPriceRepository : IItemPriceRepository
     {
 		private static Dictionary<string, decimal> _prices;
-
+		/// <summary>
+		/// Se asocia precios al dicionario;
+		/// un diccionario tiene Clave y valor _> Key=Id as string y valor decimal 
+		/// </summary>
 		static ItemPriceRepository()
 		{
 			_prices = new Dictionary<string, decimal>() { { "B", 0.65m }, { "M", 1.00m }, { "C", 1.35m }, { "W", 1.50m } };
@@ -25,7 +29,11 @@ namespace MetalBakery.API.Repository
 				Price = _prices[itemId]
 			};
 		}
-
+		/// <summary>
+		/// Por cada uno de los elementos del diccionario
+		/// /// los recorre y los convierte a una lsita de clave valor
+		/// </summary>
+		/// <returns>List<ItemPriceDto></returns>
 		public List<ItemPriceDto> GetAll()
 		{
 			return _prices.Select(x => new ItemPriceDto
