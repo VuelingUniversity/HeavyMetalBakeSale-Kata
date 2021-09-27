@@ -1,5 +1,6 @@
 ﻿using HeavyMetalBakery.Domain;
 using HeavyMetalBakery.Infraestructure.Repository;
+using HeavyMetalBakery.Infraestructure.Repository.HTTP;
 using HeavyMetalBakery.MVC.Models;
 using HeavyMetalBakery.MVC.ViewModels;
 using HeavyMetalBakery.Services;
@@ -10,7 +11,6 @@ namespace HeavyMetalBakery.MVC.Controllers
 {
     public class OrderController : Controller
     {
-        // GET: Order
         public ActionResult Index()
         {
             return View();
@@ -25,6 +25,16 @@ namespace HeavyMetalBakery.MVC.Controllers
             order.setOrderItems(items);
             viewModel.Order = order;
             return View(viewModel);
+        }
+
+        public ActionResult Buy(Order order)
+        {
+            IStockService wcfStockService = new SoapStockService();
+            foreach (var item in order.OrderItems)
+            {
+                wcfStockService.ReduceStock(item.ItemId);
+            }            
+            return Redirect(@"..\Bake\BakeView");
         }
     }
 }

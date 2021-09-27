@@ -81,6 +81,7 @@
     <None Include="Connected Services\WCFService\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Files\ShoppingCart.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -123,8 +124,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Files\ShoppingCart.txt" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

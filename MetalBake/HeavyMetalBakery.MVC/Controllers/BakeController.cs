@@ -65,12 +65,8 @@ namespace HeavyMetalBakery.MVC.Controllers
         {
             IShoppingCartService cartStockService = new ShoppingCartStockService();
             cartStockService.AddStock(bake.Sort, bake.Quantity);
-
-            //esto lo pondré en el boton buy una vez lo acabe
-            IStockService wcfStockService = new SoapStockService();
-            wcfStockService.ReduceStock(bake.Sort);
-
             return Redirect("BakeView");
         }
+
     }
 }

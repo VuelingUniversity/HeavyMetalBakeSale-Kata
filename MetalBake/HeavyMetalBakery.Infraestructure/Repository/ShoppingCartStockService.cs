@@ -10,13 +10,15 @@ namespace HeavyMetalBakery.Infraestructure.Repository
 {
     public class ShoppingCartStockService : IShoppingCartService
     {
-        private const string V = @"C:\Users\pginer\Source\Repos\HeavyMetalBake\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.txt";
-        private readonly string _url = V;
+        //
+        private const string V = @"C:\Users\pginer\Source\Repos\HeavyMetalBake\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.json";
+        private const string C = @"C:\Users\Pablo PC\Source\Repos\HeavyMetalBakeSale\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.json";
+        private readonly string _url = C;
         private readonly IPriceService _priceService = new InMemoryPriceService();
 
         public void AddStock(string itemId, int amount)
         {
-            var jsonData = System.IO.File.ReadAllText(_url);
+            var jsonData = File.ReadAllText(_url);
             var itemsToCart = JsonConvert.DeserializeObject<List<OrderItem>>(jsonData)
                               ?? new List<OrderItem>();
 

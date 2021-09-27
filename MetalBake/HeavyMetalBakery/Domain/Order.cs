@@ -5,7 +5,7 @@ namespace HeavyMetalBakery.Domain
 {
     public class Order
     {
-        private List<OrderItem> _listOfItems { get; set; }
+        public List<OrderItem> _listOfItems { get; set; }
 
         public Order()
         {
