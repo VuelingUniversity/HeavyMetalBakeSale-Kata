@@ -22,5 +22,35 @@
     "BasePrice": 1.00,
     "ItemId": "M",
     "TotalPrice": 1.00
+  },
+  {
+    "Amount": 1,
+    "BasePrice": 1.00,
+    "ItemId": "M",
+    "TotalPrice": 1.00
+  },
+  {
+    "Amount": 1,
+    "BasePrice": 1.00,
+    "ItemId": "M",
+    "TotalPrice": 1.00
+  },
+  {
+    "Amount": 1,
+    "BasePrice": 1.35,
+    "ItemId": "C",
+    "TotalPrice": 1.35
+  },
+  {
+    "Amount": 1,
+    "BasePrice": 1.50,
+    "ItemId": "W",
+    "TotalPrice": 1.50
+  },
+  {
+    "Amount": 1,
+    "BasePrice": 0.65,
+    "ItemId": "B",
+    "TotalPrice": 0.65
   }
 ]

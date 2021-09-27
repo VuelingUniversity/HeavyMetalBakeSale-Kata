@@ -10,7 +10,8 @@ namespace HeavyMetalBakery.Infraestructure.Repository
 {
     public class ShoppingCartStockService : IShoppingCartService
     {
-        private readonly string _url = @"C:\Users\pginer\Source\Repos\HeavyMetalBake\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.txt";
+        private const string V = @"C:\Users\pginer\Source\Repos\HeavyMetalBake\MetalBake\HeavyMetalBakery.Infraestructure\Files\ShoppingCart.txt";
+        private readonly string _url = V;
         private readonly IPriceService _priceService = new InMemoryPriceService();
 
         public void AddStock(string itemId, int amount)
