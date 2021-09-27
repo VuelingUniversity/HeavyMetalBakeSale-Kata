@@ -33,7 +33,7 @@ namespace MetalBakery.Infraestructure.Repository.Http
 
         public Dictionary<string, decimal> GetPrices()
         {
-            string apiUrl = "https://localhost:44330/prices";
+            string apiUrl = "http://localhost:46002//prices";
 
             using (WebClient client = new WebClient())
             {
