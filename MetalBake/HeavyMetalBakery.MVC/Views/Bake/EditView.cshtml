@@ -1,0 +1,22 @@
+﻿@model HeavyMetalBakery.MVC.Models.Bake
+@{
+    ViewBag.Title = "EditView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit an item</h2>
+
+@using (Html.BeginForm("SaveBake", "Bake", FormMethod.Post))
+{
+    {
+        @Html.TextBoxFor(b => b.Sort, new { @readonly = "readonly" })
+        <br />
+        @Html.TextBoxFor(b => b.Name, new { @readonly = "readonly" })
+        <br />
+        @Html.TextBoxFor(b => b.Price)
+        <br />
+        @Html.TextBoxFor(b => b.Quantity)
+        <br />
+        <input type="submit" value="Edit" />
+    }
+}
